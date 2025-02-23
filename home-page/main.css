@@ -82,17 +82,99 @@ nav .ri-shopping-cart-line {
 /*=================== MAIN ===================*/
 .hero {
   display: flex;
-  grid-template-columns: repeat(2, 2rem,300px);
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  height: 50vh;
-  background: url('hero.jpg') no-repeat center center/cover;
-  color: #f5f4f4;
-  text-align: center;
   padding: 2rem;
+  min-height: 100vh;
   
 }
+
+.hero .text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-align: left; 
+  max-width: 50%; 
+  padding-right: 2rem; 
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.hero p {
+  font-size: 1rem; 
+  margin: 1rem 0;
+  color: #bbb;
+}
+
+.hero .shop-now {
+  background-color: #FFD700;
+  color: #2f4d76;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem; 
+}
+
+.hero .shop-now:hover {
+  background-color: #ffcc00;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  object-fit:contain;
+}
+
+
+/*=================== RESPONSIVE DESIGN ===================*/
+
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  nav .nav-links {
+      margin-top: 1rem;
+      gap: 1.5rem;
+  }
+
+  .hero {
+      flex-direction: column;
+      padding: 1rem;
+      min-height: auto;
+  }
+
+  .hero .text-group {
+      max-width: 100%;
+      align-items: center; 
+      text-align: center; 
+      padding-right: 0; 
+  }
+
+  .hero img {
+      max-width: 100%; 
+      margin-top: 1rem;
+  }
+
+  .hero h1 {
+      font-size: 2.5rem; 
+  }
+
+  .hero p {
+      font-size: 1.1rem; 
+  }
+}
+/*=================== DECORATIVE DOT ===================*/
+
 .dots {
   position: absolute;
   top: 50%;
@@ -100,53 +182,7 @@ nav .ri-shopping-cart-line {
   width: 120%;
   height: 120%;
   background: radial-gradient(circle, rgba(151, 5, 5, 0.1) 10%, transparent 20%);
-  background-size: 30px 30px; /* Noktaların büyüklüğünü ayarlıyouz.*/
+  background-size: 30px 30px; 
   transform: translate(-50%, -50%);
-  z-index: 1; /* Fotoğrafın arkasında kalmasını sağlıyo.*/
+  z-index: 1; 
 }
-
-
-
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
-
-.hero .shop-now {
-  background-color: var(--yellow);
-  color: var(--blue);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.hero .shop-now:hover {
-  background-color: #ffaa00;
-}
-
-
-.product button {
-  background-color: var(--blue);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.product button:hover {
-  background-color: #3f5a92;
-}
-
-/*=================== RESPONSIVE DESIGN ===================*/
-/* İsteğe bağlı: Mobil ve tablet cihazlar için uyumlu tasarım kuralları ekleyebilirsiniz */
-
-/*=================== DECORATIVE DOT ===================*/
-

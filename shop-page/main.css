@@ -39,6 +39,13 @@ nav {
   padding: 1rem 2rem;
 }
 
+.cart-count {
+  background-color: yellow;
+  color: black; 
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
 nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -59,10 +66,6 @@ nav .nav-links li a {
   transition: color 0.3s ease;
 }
 
-nav .nav-links li a:hover {
-  color: var(--yellow);
-}
-
 nav .ri-shopping-cart-line {
   font-size: 1.5rem;
   cursor: pointer;
@@ -73,6 +76,50 @@ nav .ri-shopping-cart-line {
 .shop {
   text-align: center;
   padding: 2rem;
+}
+
+nav .nav-links li a {
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;  
+  bottom: -5px; 
+  width: 0%; 
+  height: 3px; 
+  background-color: var(--yellow); 
+  transition: width 0.3s ease; 
+}
+
+nav .nav-links li a:hover::after {
+  width: 100%; 
+}
+
+.add-to-cart {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.3s ease, transform 0.3s ease;
+}
+
+.product:hover .add-to-cart {
+  opacity: 1;
+  bottom: 10px;
+  transform: translateX(-50%) translateY(-5px) scale(1.1); 
 }
 
 .products {
