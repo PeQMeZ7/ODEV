@@ -39,26 +39,27 @@ nav {
   padding: 1rem 2rem;
 }
 
-.cart-count {
-  background-color: yellow;
-  color: black; 
-  padding: 2px 6px;
-  border-radius: 50%;
-}
-
 nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  padding: 0 100px;
 }
 
 nav .nav-links {
+  font-size: 20px;
   display: flex;
+  flex: 0,50;
+  justify-content: center;
   gap: 3rem;
+  padding-left: 30rem;
 }
-
+.ri-shopping-cart-line {
+  color: white;
+  padding: 0 100px;
+}
 nav .nav-links li {
   position: relative;
+  margin-left: 20px;
 }
 
 nav .nav-links li a {
@@ -66,16 +67,42 @@ nav .nav-links li a {
   transition: color 0.3s ease;
 }
 
+nav .nav-links li a:hover {
+  color: var(--yellow);
+}
+
+nav .nav-links li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: var(--yellow);
+  transition: width 0.3s ease;
+}
+
+nav .nav-links li a:hover::after {
+  width: 100%;
+}
+
 nav .ri-shopping-cart-line {
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
-  color: white;
+  transition: font-size 0.3s ease;
+}
+nav .ri-shopping-cart-line:hover {
+  font-size: 2.1rem;
 }
 
 /*=================== MAIN ===================*/
 .shop {
   text-align: center;
   padding: 2rem;
+}
+.shop h2 {
+  font-size: 2.5rem;
+  margin-top: 3rem ;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
 }
 
 nav .nav-links li a {
@@ -99,6 +126,67 @@ nav .nav-links li a:hover::after {
   width: 100%; 
 }
 
+
+.products {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.product {
+  position: relative;
+  padding: 0.5rem;
+  gap: rem;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} 
+
+.product-bg {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: 70%;
+  height: 100%;
+  background-color: var(--box-bgcolor);
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  
+}
+
+.product:hover .product-bg {
+  opacity: 7;
+  
+}
+
+.product img {
+  max-width: 80%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product h4 {
+  margin: 0.5rem 0;
+  color: var(--dark-gray);
+  transition: transform 0.3s ease;
+}
+
+.product p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--dark-gray);
+  transition: transform 0.3s ease;
+}
+
+.product:hover img, .product:hover h4, .product:hover p {
+  transform: translateY(-20px);
+}
+
 .add-to-cart {
   position: absolute;
   bottom: -10px;
@@ -118,84 +206,7 @@ nav .nav-links li a:hover::after {
 
 .product:hover .add-to-cart {
   opacity: 1;
-  bottom: 10px;
-  transform: translateX(-50%) translateY(-5px) scale(1.1); 
-}
-
-.products {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.product {
-  position: relative;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-bg {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  width: 120%;
-  height: 100%;
-  background-color: var(--box-bgcolor);
-  border-radius: 16px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.product:hover .product-bg {
-  opacity: 7;
-  transform: translate(-50%, -50%);
-}
-
-.product img {
-  max-width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-.product:hover img {
-  transform: translateY(-20px);
-}
-.product h4 {
-  margin: 0.5rem 0;
-  color: var(--dark-gray);
-}
-
-.product p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: var(--light-gray);
-}
-
-
-.add-to-cart {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  text-align: center;
-  line-height: 40px;
-  opacity: 0;
-  transition: opacity 0.3s ease, bottom 0.3s ease;
-}
-
-.product:hover .add-to-cart {
-  opacity: 1;
-  bottom: 10px;
+  bottom: -20px;
 }
 
 /*=================== RESPONSIVE DESIGN ===================*/

@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
@@ -39,17 +40,23 @@ nav {
 nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  padding: 0 100px;
 }
 
 nav .nav-links {
+  font-size: 20px;
   display: flex;
   flex: 0,50;
   justify-content: center;
   gap: 3rem;
+  padding-left: 30rem;
 }
-
+.ri-shopping-cart-line {
+  padding: 0 100px;
+}
 nav .nav-links li {
   position: relative;
+  margin-left: 20px;
 }
 
 nav .nav-links li a {
@@ -75,16 +82,26 @@ nav .nav-links li a:hover::after {
 }
 
 nav .ri-shopping-cart-line {
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
+  transition: font-size 0.3s ease;
+}
+nav .ri-shopping-cart-line:hover {
+  font-size: 2.1rem;
 }
 
 /*=================== MAIN ===================*/
+.html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 120px;
   min-height: 100vh;
   
 }
@@ -98,28 +115,31 @@ nav .ri-shopping-cart-line {
   padding-right: 2rem; 
 }
 
-.hero h1 {
-  font-size: 4rem;
+.hero .text-group h1 {
+  font-size: 6rem;
   margin-bottom: 1rem;
-  color: #ddd;
+  color: white
+  white-space: pre-line;
+  max-width: 850px; /
 }
 
-.hero p {
+.hero .text-group p {
   font-size: 1rem; 
   margin: 1rem 0;
-  color: #bbb;
+  color: white
+  white-space: pre-line;
+  max-width: 550px; /* Metnin dar bir alanda kalmasını sağlar */
 }
 
 .hero .shop-now {
-  background-color: #FFD700;
-  color: #2f4d76;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-  margin-top: 1rem; 
+  background-color: transparent; /* Şeffaf arka plan */
+  color: white; /* Beyaz yazı rengi */
+  border: 2px solid rgba(255, 255, 255, 0.6); /* Yarı şeffaf beyaz çerçeve */
+  padding: 10px 20px; /* İç boşluk */
+  font-size: 16px; /* Yazı boyutu */
+  border-radius: 8px; /* Kenarları yuvarlak */
+  cursor: pointer; /* İmleç efekti */
+  transition: all 0.3s ease-in-out; /* Yumuşak geçiş efekti */
 }
 
 .hero .shop-now:hover {
@@ -129,6 +149,7 @@ nav .ri-shopping-cart-line {
 .hero img {
   max-width: 100%;
   height: auto;
+  width: 1050px;
   object-fit:contain;
 }
 
