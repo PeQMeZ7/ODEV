@@ -128,18 +128,17 @@ nav .ri-shopping-cart-line:hover {
   margin: 1rem 0;
   color: white
   white-space: pre-line;
-  max-width: 550px; /* Metnin dar bir alanda kalmasını sağlar */
+  max-width: 550px;
 }
-
 .hero .shop-now {
   background-color: transparent; /* Şeffaf arka plan */
-  color: white; /* Beyaz yazı rengi */
-  border: 2px solid rgba(255, 255, 255, 0.6); /* Yarı şeffaf beyaz çerçeve */
-  padding: 10px 20px; /* İç boşluk */
-  font-size: 16px; /* Yazı boyutu */
-  border-radius: 8px; /* Kenarları yuvarlak */
-  cursor: pointer; /* İmleç efekti */
-  transition: all 0.3s ease-in-out; /* Yumuşak geçiş efekti */
+  color: white; 
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out; 
 }
 
 .hero .shop-now:hover {
