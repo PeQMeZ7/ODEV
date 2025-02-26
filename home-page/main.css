@@ -10,13 +10,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  
 }
 
 body {
   font-family: "Inter", serif;
   background-color: var(--blue);
   color: #ffffff;
+  overflow:hidden
 }
 
 ul {
@@ -52,6 +53,7 @@ nav .nav-links {
   padding-left: 30rem;
 }
 .ri-shopping-cart-line {
+  color: rgb(255, 255, 255);
   padding: 0 100px;
 }
 nav .nav-links li {
@@ -73,12 +75,11 @@ nav .nav-links li a::after {
   display: block;
   width: 0;
   height: 3px;
-  background: var(--yellow);
   transition: width 0.3s ease;
 }
 
 nav .nav-links li a:hover::after {
-  width: 100%;
+  width: 80%;
 }
 
 nav .ri-shopping-cart-line {
@@ -98,12 +99,13 @@ nav .ri-shopping-cart-line:hover {
   font-family: 'Poppins', sans-serif;
 }
 .hero {
+  top: -70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 120px;
   min-height: 100vh;
-  
+  position: relative; 
 }
 
 .hero .text-group {
@@ -145,12 +147,33 @@ nav .ri-shopping-cart-line:hover {
   background-color: #ffcc00;
 }
 
-.hero img {
-  max-width: 100%;
+.image-container {
+  position: relative;
+  width: 900px; 
   height: auto;
-  width: 1050px;
-  object-fit:contain;
+  right: 100px;
 }
+
+.koltuk {
+  position: absolute;
+  top: 350px; 
+  width: 900px;
+  left: auto;
+  right: 1px;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.nokta {
+  position: absolute;
+  top: 350px; 
+  right: 20px; 
+  width: 300px;  
+  height: 200px;
+  z-index: 0;
+}
+
 
 
 /*=================== RESPONSIVE DESIGN ===================*/
