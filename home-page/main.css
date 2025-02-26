@@ -120,15 +120,15 @@ nav .ri-shopping-cart-line:hover {
 .hero .text-group h1 {
   font-size: 6rem;
   margin-bottom: 1rem;
-  color: white
+  color: white ;
   white-space: pre-line;
-  max-width: 850px; /
+  max-width: 850px; 
 }
 
 .hero .text-group p {
   font-size: 1rem; 
   margin: 1rem 0;
-  color: white
+  color: white;
   white-space: pre-line;
   max-width: 550px;
 }
@@ -218,14 +218,3 @@ nav .ri-shopping-cart-line:hover {
 }
 /*=================== DECORATIVE DOT ===================*/
 
-.dots {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle, rgba(151, 5, 5, 0.1) 10%, transparent 20%);
-  background-size: 30px 30px; 
-  transform: translate(-50%, -50%);
-  z-index: 1; 
-}
