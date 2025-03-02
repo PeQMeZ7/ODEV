@@ -36,13 +36,18 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: var(--blue);
-  padding: 1rem 2rem;
+  padding: 1rem 8rem;
 }
 
 nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 0 100px;
+}
+
+nav .right-area {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
 }
 
 nav .nav-links {
@@ -51,11 +56,9 @@ nav .nav-links {
   flex: 0,50;
   justify-content: center;
   gap: 3rem;
-  padding-left: 30rem;
 }
 .ri-shopping-cart-line {
   color: rgb(255, 255, 255);
-  padding: 0 100px;
 }
 nav .nav-links li {
   position: relative;
