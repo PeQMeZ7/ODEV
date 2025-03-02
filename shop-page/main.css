@@ -72,15 +72,18 @@ nav .nav-links li a:hover {
 }
 
 nav .nav-links li a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;  
+  bottom: -5px; 
+  width: 0%; 
+  height: 3px; 
+  background-color: var(--yellow); 
+  transition: width 0.3s ease; 
 }
 
 nav .nav-links li a:hover::after {
-  width: 80%;
+  width: 100%;
 }
 
 nav .ri-shopping-cart-line {
@@ -109,22 +112,6 @@ nav .nav-links li a {
   padding: 0.5rem 0;
   transition: color 0.3s ease;
 }
-
-nav .nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;  
-  bottom: -5px; 
-  width: 0%; 
-  height: 3px; 
-  background-color: var(--yellow); 
-  transition: width 0.3s ease; 
-}
-
-nav .nav-links li a:hover::after {
-  width: 100%; 
-}
-
 
 .products {
   display: flex;

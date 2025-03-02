@@ -36,6 +36,8 @@ nav {
   align-items: center;
   background-color: var(--blue);
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 100;
 }
 
 nav .logo {
@@ -71,15 +73,18 @@ nav .nav-links li a:hover {
 }
 
 nav .nav-links li a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;  
+  bottom: -5px; 
+  width: 0%; 
+  height: 3px; 
+  background-color: var(--yellow); 
+  transition: width 0.3s ease; 
 }
 
 nav .nav-links li a:hover::after {
-  width: 80%;
+  width: 100%;
 }
 
 nav .ri-shopping-cart-line {
