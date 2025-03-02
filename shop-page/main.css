@@ -68,7 +68,7 @@ nav .nav-links li a {
 }
 
 nav .nav-links li a:hover {
-  color: var(--yellow);
+  color: white;
 }
 
 nav .nav-links li a::after {
